@@ -1,0 +1,186 @@
+{
+  "Rechteck": {
+    "variablen": [
+      "stückzahl",
+      "stärke",
+      "material",
+      "entgraten",
+      "oberfläche",
+      "länge_x",
+      "breite_y",
+      "anzahl_bohrungen",
+      "bohrungsdurchmesser",
+      "abstand_bohrungen_x",
+      "abstand_bohrungen_y"
+    ],
+    "rendering": "Extrusion eines Rechtecks mit Länge x und Breite y entlang der z-Achse um die Stärke t. Bohrungen werden als zylindrische Volumen mit Durchmesser d an den Ecken (im Abstand xa, ya) vom Quader abgezogen."
+  },
+  "Rahmen": {
+    "variablen": [
+      "stückzahl",
+      "stärke",
+      "material",
+      "entgraten",
+      "oberfläche",
+      "länge_x",
+      "breite_y",
+      "innenlänge_xi",
+      "innenbreite_yi",
+      "anzahl_bohrungen",
+      "bohrungsdurchmesser",
+      "abstand_bohrungen_x",
+      "abstand_bohrungen_y"
+    ],
+    "rendering": "Es werden zwei Quader erzeugt: ein äußerer mit Länge x und Breite y und ein innerer mit Länge xi und Breite yi (beide mit Höhe t). Der innere wird vom äußeren subtrahiert, so dass ein rechteckiger Ring entsteht. Bohrungen werden wie beim Rechteck behandelt."
+  },
+  "Dreieck": {
+    "variablen": [
+      "stückzahl",
+      "stärke",
+      "material",
+      "entgraten",
+      "oberfläche",
+      "seite_a",
+      "seite_b",
+      "winkel_alpha"
+    ],
+    "rendering": "Aus den Parametern Seite A, Seite B und Winkel α wird eine dreieckige Fläche erzeugt. Diese Fläche wird um die Stärke t extrudiert. Optional werden Bohrungen als Zylinder durch das Volumen gestochen."
+  },
+  "Knotenblech": {
+    "variablen": [
+      "stückzahl",
+      "stärke",
+      "material",
+      "entgraten",
+      "oberfläche",
+      "schenkel_a_länge",
+      "schenkel_b_länge",
+      "winkel",
+      "anzahl_bohrungen",
+      "bohrungsdurchmesser"
+    ],
+    "rendering": "Ein L-förmiges Polygon aus zwei Rechtecken wird um die Dicke t extrudiert. Bohrungen werden als zylindrische Aussparungen hinzugefügt."
+  },
+  "Flachwinkel": {
+    "variablen": [
+      "stückzahl",
+      "stärke",
+      "material",
+      "entgraten",
+      "oberfläche",
+      "schenkel_a_länge",
+      "schenkel_b_länge",
+      "winkel",
+      "anzahl_bohrungen",
+      "bohrungsdurchmesser"
+    ],
+    "rendering": "Ein flaches L-Winkelblech wird aus zwei Rechtecken in der Ebene definiert und um t extrudiert. Löcher werden durch Abzug zylindrischer Volumen eingefügt."
+  },
+  "Kreis": {
+    "variablen": [
+      "stückzahl",
+      "stärke",
+      "material",
+      "entgraten",
+      "oberfläche",
+      "durchmesser",
+      "anzahl_bohrungen",
+      "bohrungsdurchmesser"
+    ],
+    "rendering": "Ein Kreis mit Radius r = Durchmesser/2 wird als 2D-Scheibe erzeugt und um die Stärke t extrudiert (Zylinder). Löcher werden als kleinere Zylinder aus dem Volumen geschnitten."
+  },
+  "Ronde": {
+    "variablen": [
+      "stückzahl",
+      "stärke",
+      "material",
+      "entgraten",
+      "oberfläche",
+      "außendurchmesser",
+      "innendurchmesser",
+      "anzahl_bohrungen",
+      "bohrungsdurchmesser"
+    ],
+    "rendering": "Aus zwei konzentrischen Kreisen (Außenradius und Innenradius) wird eine Ringfläche erzeugt, die um t extrudiert wird. Löcher werden als weitere Zylinder subtrahiert."
+  },
+  "Kreisbogen": {
+    "variablen": [
+      "stückzahl",
+      "stärke",
+      "material",
+      "entgraten",
+      "oberfläche",
+      "außenradius",
+      "innenradius",
+      "winkel_phi",
+      "anzahl_bohrungen",
+      "bohrungsdurchmesser"
+    ],
+    "rendering": "Ein kreisförmiges Segment mit definiertem Winkel φ wird zwischen Innen- und Außenradius generiert. Dieses Segment wird um t extrudiert, so dass ein gebogener Streifen entsteht. Bohrungen werden durch Abzug zylindrischer Volumen erzeugt."
+  },
+  "U-Profil": {
+    "variablen": [
+      "stückzahl",
+      "stärke",
+      "material",
+      "entgraten",
+      "oberfläche",
+      "länge_z",
+      "innenbreite_b",
+      "innenhöhe_a",
+      "innenhöhe_c"
+    ],
+    "rendering": "Die Querschnittskontur besteht aus drei Segmenten (zwei Schenkel mit Höhen A und C und eine Zwischenbreite B). Diese Kontur wird entlang der Profil-Länge Z extrudiert. Es entsteht ein U-förmiges Profil. Bohrungen (falls vorhanden) werden als Zylinder aus den Schenkeln oder dem Boden entfernt."
+  },
+  "Z-Profil": {
+    "variablen": [
+      "stückzahl",
+      "stärke",
+      "material",
+      "entgraten",
+      "oberfläche",
+      "länge_z",
+      "innenhöhe_a",
+      "innenbreite_b",
+      "innenhöhe_c"
+    ],
+    "rendering": "Ähnlich zum U-Profil, jedoch sind die beiden Schenkel versetzt, so dass eine Z-förmige Kontur entsteht. Die Kontur wird entlang der Länge Z extrudiert, um das Profil zu erzeugen."
+  },
+  "L-Profil": {
+    "variablen": [
+      "stückzahl",
+      "stärke",
+      "material",
+      "entgraten",
+      "oberfläche",
+      "schenkel_a_länge",
+      "schenkel_b_länge",
+      "winkel"
+    ],
+    "rendering": "Ein rechteckiges L-Profil wird aus zwei Schenkeln A und B konstruiert. Diese L-Kontur wird entlang der Profil-Länge extrudiert, so dass ein rechtwinkliges Profil entsteht."
+  },
+  "Wanne": {
+    "variablen": [
+      "stückzahl",
+      "stärke",
+      "material",
+      "entgraten",
+      "oberfläche",
+      "bodenlänge",
+      "bodenbreite",
+      "höhe_seitenwände"
+    ],
+    "rendering": "Die Bodenplatte wird als Rechteck extrudiert. An allen vier Kanten werden Platten mit Höhe der Seitenwände hochgebogen (kantet), so dass eine kastenförmige Wanne entsteht."
+  },
+  "DXF-Editor": {
+    "variablen": [
+      "stückzahl",
+      "stärke",
+      "material",
+      "entgraten",
+      "oberfläche",
+      "dxf_datei"
+    ],
+    "rendering": "Eine geschlossene 2D-Kontur aus einer DXF-Datei wird gelesen und um die Stärke t extrudiert. Innenliegende Konturen in der DXF definieren Ausschnitte, die vom extrudierten Volumen subtrahiert werden."
+  }
+}
