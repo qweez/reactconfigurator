@@ -182,5 +182,132 @@
       "dxf_datei"
     ],
     "rendering": "Eine geschlossene 2D-Kontur aus einer DXF-Datei wird gelesen und um die Stärke t extrudiert. Innenliegende Konturen in der DXF definieren Ausschnitte, die vom extrudierten Volumen subtrahiert werden."
+  },
+  "SendCut_L_Winkelblech": {
+    "variablen": [
+      "stückzahl",
+      "stärke",
+      "material",
+      "entgraten",
+      "oberfläche",
+      "seite1_länge",
+      "seite1_breite",
+      "seite2_länge",
+      "seite2_breite",
+      "eckradius"
+    ],
+    "rendering": "Eine L-förmige Halteplatte (L-Bracket) mit zwei Schenkeln. Die Schenkellängen und -breiten bestimmen die rechteckigen Bereiche; die Kontur wird um die Materialstärke extrudiert. An den Ecken kann ein Radius hinzugefügt werden. Optional können Biegelinien zur Kantung definiert werden."
+  },
+  "SendCut_Rechteckflansch": {
+    "variablen": [
+      "stückzahl",
+      "stärke",
+      "material",
+      "entgraten",
+      "oberfläche",
+      "länge_x",
+      "breite_y",
+      "lochabstand_vom_rand",
+      "lochdurchmesser"
+    ],
+    "rendering": "Eine rechteckige Flanschplatte mit vier Bohrungen in den Ecken. Die Platte wird als Rechteck extrudiert; vier Löcher werden als Zylinder mit Durchmesser lochdurchmesser im Abstand vom Rand subtrahiert."
+  },
+  "SendCut_Quadratflansch": {
+    "variablen": [
+      "stückzahl",
+      "stärke",
+      "material",
+      "entgraten",
+      "oberfläche",
+      "kantenlänge",
+      "lochabstand",
+      "lochdurchmesser"
+    ],
+    "rendering": "Eine quadratische oder diamantförmige Platte mit vier Bohrungen. Aus einem Quadrat mit Kantenlänge wird um die Stärke extrudiert; Löcher werden als Zylinder an den Ecken im Abstand von den Kanten abgezogen."
+  },
+  "SendCut_Schrägwinkel": {
+    "variablen": [
+      "stückzahl",
+      "stärke",
+      "material",
+      "entgraten",
+      "oberfläche",
+      "schenkel1_länge",
+      "schenkel2_länge",
+      "schenkelbreite",
+      "eckradius"
+    ],
+    "rendering": "Ein schräg verlaufender Winkel (Gusset) wird aus zwei rechtwinklig verbundenen Rechtecken unterschiedlicher Länge erzeugt. Die Kontur wird extrudiert und optional mit einem Eckradius versehen."
+  },
+  "SendCut_Trapezplatte": {
+    "variablen": [
+      "stückzahl",
+      "stärke",
+      "material",
+      "entgraten",
+      "oberfläche",
+      "seite_a",
+      "seite_b",
+      "seite_c",
+      "lochdurchmesser"
+    ],
+    "rendering": "Eine trapez- oder dreieckförmige Platte wird durch die Seitenlängen definiert und um die Dicke extrudiert. Ein zentrales Loch wird als Zylinder mit definiertem Durchmesser herausgeschnitten."
+  },
+  "SendCut_Perforierte_Platte": {
+    "variablen": [
+      "stückzahl",
+      "stärke",
+      "material",
+      "entgraten",
+      "oberfläche",
+      "länge_x",
+      "breite_y",
+      "lochanzahl_x",
+      "lochanzahl_y",
+      "lochdurchmesser"
+    ],
+    "rendering": "Eine rechteckige Platte wird mit einer regelmäßigen Matrix von Bohrungen versehen. Nach Extrusion der Platte werden die Bohrungen als gleichmäßig verteilte Zylinder im Raster (lochanzahl_x × lochanzahl_y) subtrahiert."
+  },
+  "SendCut_Runde_Flanschplatte": {
+    "variablen": [
+      "stückzahl",
+      "stärke",
+      "material",
+      "entgraten",
+      "oberfläche",
+      "außendurchmesser",
+      "lochanzahl",
+      "lochdurchmesser",
+      "lochkreisdurchmesser"
+    ],
+    "rendering": "Eine kreisrunde Platte wird mit mehreren Bohrungen versehen, die auf einem Lochkreis liegen. Das Volumen wird aus einem Zylinder extrudiert; Bohrungen sind kleinere Zylinder mit definiertem Durchmesser und radialem Abstand (lochkreisdurchmesser/2)."
+  },
+  "SendCut_Ovale_Bogenplatte": {
+    "variablen": [
+      "stückzahl",
+      "stärke",
+      "material",
+      "entgraten",
+      "oberfläche",
+      "länge",
+      "breite",
+      "bogenradius",
+      "lochdurchmesser",
+      "lochanzahl"
+    ],
+    "rendering": "Eine ovale oder bogenförmige Platte wird aus einer länglichen Kontur mit definiertem Bogenradius erstellt und um die Stärke extrudiert. Bohrungen werden als Zylinder mit definiertem Durchmesser an vorgegebenen Positionen abgezogen."
+  },
+  "SendCut_Zahnscheibe": {
+    "variablen": [
+      "stückzahl",
+      "stärke",
+      "material",
+      "entgraten",
+      "oberfläche",
+      "außendurchmesser",
+      "zahnanzahl",
+      "lochdurchmesser"
+    ],
+    "rendering": "Eine runde Scheibe mit außenliegenden Zähnen (ähnlich einem Zahnrad). Die äußere Kontur wird aus einem Kreis mit periodischen Aussparungen generiert. Nach Extrusion werden mittige oder randnahe Bohrungen als Zylinder subtrahiert."
   }
 }
